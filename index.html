@@ -1,0 +1,134 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tempest | Group Site</title>
+    <meta name="description" content="Tempest Group site.">
+    <link rel="stylesheet" href="styles.css?v=20260708-0819">
+  </head>
+  <body class="top-page">
+    <header class="site-header">
+      <a class="brand" href="index.html"><span class="brand-mark">T</span><span>Tempest</span></a>
+      <details class="top-burger-menu">
+        <summary aria-label="Menu"><span></span><span></span><span></span></summary>
+        <nav class="top-menu-panel" aria-label="site menu">
+          <a href="shops/various.html">Various</a>
+          <a href="shops/solomon.html">Solomon</a>
+          <a href="shops/lively.html">Lively</a>
+          <a href="shops/charme.html">Charme</a>
+          <a href="shops/strive.html">Strive</a>
+          <a href="shops/ebichanchi.html">えびちゃん家</a>
+          <a class="top-menu-admin" href="admin/index.html">Admin</a>
+        </nav>
+      </details>
+    </header>
+    <main>
+      <section class="hero top-hero">
+        <div class="hero-content">
+          <p class="eyebrow">Kyobashi Night Amusement</p>
+          <h1>Tempest Group</h1>
+        </div>
+      </section>
+      <section class="top-content-stack">
+        <section class="top-social-links reveal-block" aria-label="social links">
+          <a class="social-button x" href="#"><span>Official X</span><small>Tap to open</small></a>
+          <a class="social-button instagram" href="#"><span>Instagram</span><small>Tap to open</small></a>
+          <a class="social-button tiktok" href="#"><span>TikTok</span><small>Tap to open</small></a>
+        </section>
+
+        <section class="shop-app-download reveal-block" aria-label="Tempest app">
+          <div class="app-promo-head">
+            <div class="app-icon-slot" aria-label="App icon placeholder"><span>T</span></div>
+            <div>
+              <p class="eyebrow">Tempest App</p>
+              <h2>Tempest&#12434;&#12450;&#12503;&#12522;&#12391;</h2>
+            </div>
+          </div>
+          <div class="app-store-links">
+            <a class="store-button coming-soon" href="#" aria-disabled="true"><span>App Store</span><strong>Comming soon</strong></a>
+            <a class="store-button coming-soon" href="#" aria-disabled="true"><span>Google Play</span><strong>Comming soon</strong></a>
+          </div>
+        </section>
+
+        <section class="top-shop-section" aria-label="shops">
+          <div class="top-shop-grid">
+            <a class="shop-banner various reveal-block reveal-pair-1" href="shops/various.html"><strong>Various</strong><small>Girls Bar</small></a>
+            <a class="shop-banner solomon reveal-block reveal-pair-1" href="shops/solomon.html"><strong>Solomon</strong><small>Concept Cafe</small></a>
+            <a class="shop-banner lively reveal-block reveal-pair-2" href="shops/lively.html"><strong>Lively</strong><small>Poker Bar</small></a>
+            <a class="shop-banner charme reveal-block reveal-pair-2" href="shops/charme.html"><strong>Charme</strong><small>ConceptCafe&amp;Bar</small></a>
+            <a class="shop-banner strive reveal-block reveal-pair-3" href="shops/strive.html"><strong>Strive</strong><small>Mix Bar</small></a>
+            <a class="shop-banner ebichan reveal-block reveal-pair-3" href="shops/ebichanchi.html"><strong>&#12360;&#12403;&#12385;&#12419;&#12435;&#23478;</strong><small>Gay Bar / Izakaya</small></a>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Tempest</span><span>&copy; 2026 Tempest</span></footer>
+    <script>
+      const revealBlocks = document.querySelectorAll(".reveal-block");
+
+      if ("IntersectionObserver" in window) {
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.18, rootMargin: "0px 0px -8% 0px" });
+
+        revealBlocks.forEach((block) => revealObserver.observe(block));
+      } else {
+        revealBlocks.forEach((block) => block.classList.add("is-visible"));
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
