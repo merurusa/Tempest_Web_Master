@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Images Admin | Tempest</title>
+    <link rel="stylesheet" href="../styles.css?v=20260708-0819">
+  </head>
+  <body class="admin-page">
+    <header class="site-header">
+      <a class="admin-back-button" href="master.html" aria-label="Back">‹</a>
+      <a class="brand" href="master.html"><span class="brand-mark">T</span><span>Images Admin</span></a>
+      <nav class="nav"><a href="master.html">Master</a><a href="index.html">Logout</a></nav>
+    </header>
+
+    <main class="admin-image-shell">
+      <section class="admin-hero">
+        <h1>Top Images</h1>
+      </section>
+
+      <section class="admin-top-preview" aria-label="top page image preview">
+        <div class="admin-preview-hero">
+          <button type="button" class="image-change-button">画像変更</button>
+          <div class="hero-content">
+            <p class="eyebrow">KYOBASHI NIGHT AMUSEMENT</p>
+            <h2>Tempest Group</h2>
+          </div>
+        </div>
+
+        <div class="admin-preview-grid">
+          <div class="shop-banner various"><button type="button" class="image-change-button">画像変更</button><strong>Various</strong></div>
+          <div class="shop-banner solomon"><button type="button" class="image-change-button">画像変更</button><strong>Solomon</strong></div>
+          <div class="shop-banner lively"><button type="button" class="image-change-button">画像変更</button><strong>Lively</strong></div>
+          <div class="shop-banner charme"><button type="button" class="image-change-button">画像変更</button><strong>Charme</strong></div>
+          <div class="shop-banner strive"><button type="button" class="image-change-button">画像変更</button><strong>Strive</strong></div>
+          <div class="shop-banner ebichan"><button type="button" class="image-change-button">画像変更</button><strong>えびちゃん家</strong></div>
+        </div>
+
+        <div class="admin-preview-app-section">
+          <div class="app-promo-head">
+            <div class="app-icon-slot"><span>T</span><button type="button" class="image-change-button icon-change">画像変更</button></div>
+            <div>
+              <h2>Tempest App</h2>
+            </div>
+          </div>
+          <div class="app-store-links">
+            <a class="store-button coming-soon" href="#" aria-disabled="true"><span>App Store</span><strong>Comming soon</strong></a>
+            <a class="store-button coming-soon" href="#" aria-disabled="true"><span>Google Play</span><strong>Comming soon</strong></a>
+          </div>
+        </div>
+      </section>
+
+      <section class="admin-image-control panel">
+        <h2>Image Upload Test</h2>
+        <div class="admin-image-control-grid">
+          <label>
+            <span>変更場所</span>
+            <select>
+              <option>Top main image</option>
+              <option>Various banner</option>
+              <option>Solomon banner</option>
+              <option>Lively banner</option>
+              <option>Charme banner</option>
+              <option>Strive banner</option>
+              <option>えびちゃん家 banner</option>
+              <option>App icon</option>
+            </select>
+          </label>
+          <label><span>画像ファイル</span><input type="file" accept="image/*"></label>
+        </div>
+        <button type="button" class="admin-primary-button admin-confirm-button">確定</button>
+      </section>
+    </main>
+
+    <footer class="site-footer"><span>Images Admin</span><a href="master.html">Master</a></footer>
+  </body>
+</html>

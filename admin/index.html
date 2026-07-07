@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin | Tempest</title>
+    <link rel="stylesheet" href="../styles.css?v=20260708-0819">
+  </head>
+  <body class="admin-page">
+    <header class="site-header"><a class="admin-back-button" href="../index.html" aria-label="Back">‹</a>
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span><span>Tempest Admin</span></a>
+      <nav class="nav"><a href="../index.html">Site</a></nav>
+    </header>
+    <main class="admin-shell">
+      <section class="admin-hero">
+        
+        <h1>Login</h1>
+        
+      </section>
+      <section class="admin-login-panel">
+        <div class="panel">
+          
+          <h2>Admin Login</h2>
+          <form class="admin-form-grid" id="admin-login-form">
+            <label><span>ID</span><input id="admin-id" type="text" placeholder="solomon" autocomplete="username"></label>
+            <label><span>4 digit password</span><input id="admin-password" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="0000" autocomplete="current-password"></label>
+            <button type="submit" class="admin-primary-button">Login</button>
+            <p class="admin-login-message" id="admin-login-message" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+      <section class="admin-menu-grid" aria-label="test login ids">
+        <a class="admin-menu-card" href="various.html"><span>ID</span><strong>various</strong></a>
+        <a class="admin-menu-card" href="solomon.html"><span>ID</span><strong>solomon</strong></a>
+        <a class="admin-menu-card" href="lively.html"><span>ID</span><strong>lively</strong></a>
+        <a class="admin-menu-card" href="charme.html"><span>ID</span><strong>charme</strong></a>
+        <a class="admin-menu-card" href="strive.html"><span>ID</span><strong>strive</strong></a>
+        <a class="admin-menu-card" href="ebichanchi.html"><span>ID</span><strong>ebichanchi</strong></a>
+        <a class="admin-menu-card" href="master.html"><span>ID</span><strong>master</strong></a>
+      </section>
+    </main>
+    <footer class="site-footer"><span>Admin Preview</span><a href="../index.html">Top</a></footer>
+    <script>
+      const testAdmins = {
+        various: "various.html",
+        solomon: "solomon.html",
+        lively: "lively.html",
+        charme: "charme.html",
+        strive: "strive.html",
+        ebichanchi: "ebichanchi.html",
+        master: "master.html"
+      };
+
+      document.getElementById("admin-login-form").addEventListener("submit", (event) => {
+        event.preventDefault();
+        const id = document.getElementById("admin-id").value.trim().toLowerCase();
+        const password = document.getElementById("admin-password").value.trim();
+        const message = document.getElementById("admin-login-message");
+        if (testAdmins[id] && password === "0000") {
+          window.location.href = testAdmins[id];
+          return;
+        }
+        message.textContent = "ID or password is incorrect.";
+      });
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
