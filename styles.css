@@ -3187,6 +3187,16 @@ h1 {
   background:
     radial-gradient(circle at 70% 18%, color-mix(in srgb, var(--gold) 20%, transparent), transparent 34%),
     linear-gradient(135deg, rgba(255, 255, 255, 0.09), rgba(255, 255, 255, 0.03));
+  overflow: hidden;
+}
+
+.admin-cast-thumb img,
+.admin-cast-preview-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--cast-image-position, center center);
+  display: block;
 }
 
 .admin-edit-panel.panel {

@@ -1,32 +1,23 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>りく Edit | Charme Admin</title><link rel="stylesheet" href="../styles.css?v=20260708-0819"></head>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Charme Cast Edit | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260709-0945"></head>
   <body class="admin-page admin-charme">
-    <header class="site-header"><a class="admin-back-button" href="charme-cast.html" aria-label="Back">‹</a><a class="brand" href="charme-cast.html"><span class="brand-mark">T</span><span>りく Edit</span></a><nav class="nav"><a href="charme-cast.html">Cast</a><a href="charme.html">Dashboard</a></nav></header>
-    <main class="admin-shell"><section class="admin-hero"><h1>りく</h1></section><section class="admin-edit-panel panel"><form class="admin-cast-form"><label class="admin-upload-box"><span>Cast image</span><input type="file" accept="image/*"><strong>Upload image</strong></label><div class="admin-cast-image-tools"><div class="admin-cast-preview-frame image-pos-center"><span>Preview</span></div><div class="admin-image-position-fields"><label><span>表示位置</span><select name="imagePosition"><option selected>中央</option><option>上</option><option>下</option><option>左</option><option>右</option></select></label><label><span>拡大率</span><input type="range" min="100" max="140" value="100"></label><small>写真の比率が違う時は、表示位置と拡大率でフレーム内の見え方を調整します。</small></div></div><label><span>Status</span><select><option>Manager</option><option selected>Cast</option><option>Boy</option><option>Reader</option><option>Coming soon</option></select></label><label class="admin-toggle-row"><span>Cast page link</span><input type="checkbox" name="linkEnabled" checked><em>ON / 選択可能</em></label><label><span>Name</span><input type="text" value="りく" placeholder="Cast name"></label><label><span>Height</span><input type="text" value="170" placeholder="例: 160cm"></label><label><span>Birthday</span><input type="text" value="9/21" placeholder="例: 01/01"></label><label><span>Hobby</span><input type="text" value="飯酒煙草" placeholder="例: カラオケ"></label><label><span>X URL</span><input type="url" value="https://x.com/charme_riku_921?s=21" placeholder="https://x.com/account"></label><label><span>Instagram URL</span><input type="url" value="https://www.instagram.com/charme_riku_921?igsh=cWoyNzd0Z2Nvc3hu" placeholder="https://instagram.com/account"></label><label><span>TikTok URL</span><input type="url" value="https://www.tiktok.com/@charme_riku_921?_r=1&amp;_t=ZS-97noYygagrN" placeholder="https://www.tiktok.com/@account"></label><button type="button" class="admin-primary-button admin-confirm-button">確定</button></form></section></main>
-    <footer class="site-footer"><span>りく Edit</span><a href="charme-cast.html">Cast List</a></footer>
+    <header class="site-header"><a class="admin-back-button" href="charme-cast.html" aria-label="Back">&lsaquo;</a><a class="brand" href="charme-cast.html"><span class="brand-mark">T</span><span>Charme Cast Edit</span></a><nav class="nav"><a href="charme-cast.html">Cast</a><a href="charme.html">Dashboard</a></nav></header>
+    <main class="admin-shell"><section class="admin-hero"><h1>Cast</h1></section><section class="admin-edit-panel panel"><form class="admin-cast-form">
+      <label class="admin-upload-box"><span>Cast image</span><input name="castImage" type="file" accept="image/*"><strong>Upload image</strong><small>List and profile photo</small></label>
+      <div class="admin-cast-image-tools"><div class="admin-cast-preview-frame image-pos-center"><span>Preview</span></div><div class="admin-image-position-fields"><label><span>Image position</span><select name="imagePosition"><option value="image-pos-center">Center</option><option value="image-pos-top">Top</option><option value="image-pos-bottom">Bottom</option><option value="image-pos-left">Left</option><option value="image-pos-right">Right</option></select></label><small>画像の見える位置を調整できます。</small></div></div>
+      <label><span>Status</span><select name="role"><option>Manager</option><option>Cast</option><option>Boy</option><option>Reader</option><option>Coming soon</option></select></label>
+      <label class="admin-toggle-row"><span>Cast page link</span><input type="checkbox" name="linkEnabled"><em>ON / selectable</em></label>
+      <label><span>Name</span><input name="name" type="text" placeholder="Cast name"></label>
+      <label><span>Height</span><input name="height" type="text" placeholder="160cm"></label>
+      <label><span>Birthday</span><input name="birthday" type="text" placeholder="01/01"></label>
+      <label><span>Hobby</span><input name="hobby" type="text" placeholder="Hobby"></label>
+      <label><span>X URL</span><input name="xUrl" type="url" placeholder="https://x.com/account"></label>
+      <label><span>Instagram URL</span><input name="instagramUrl" type="url" placeholder="https://instagram.com/account"></label>
+      <label><span>TikTok URL</span><input name="tiktokUrl" type="url" placeholder="https://www.tiktok.com/@account"></label>
+      <button type="button" class="admin-primary-button admin-confirm-button">Save</button>
+    </form></section></main>
+    <footer class="site-footer"><span>Charme Cast Edit</span><a href="charme-cast.html">Cast List</a></footer>
+    <script type="module" src="../scripts/tempest-cast-admin.js?v=20260709-0945"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
