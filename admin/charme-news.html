@@ -1,42 +1,23 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Charme News Admin | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260708-0819"></head>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Charme News Admin | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260709-0915"></head>
   <body class="admin-page admin-charme">
-    <header class="site-header"><a class="admin-back-button" href="charme.html" aria-label="Back">‹</a><a class="brand" href="charme.html"><span class="brand-mark">T</span><span>Charme News</span></a><nav class="nav"><a href="charme.html">Dashboard</a><a href="index.html">Logout</a></nav></header>
+    <header class="site-header"><a class="admin-back-button" href="charme.html" aria-label="Back">&lsaquo;</a><a class="brand" href="charme.html"><span class="brand-mark">T</span><span>Charme News</span></a><nav class="nav"><a href="charme.html">Dashboard</a><a href="index.html">Logout</a></nav></header>
     <main class="admin-shell">
       <section class="admin-hero"><h1>News Edit</h1></section>
       <section class="admin-edit-panel panel">
         <form class="admin-news-form">
-          <label class="admin-upload-box"><span>Post image</span><input type="file" accept="image/*"><strong>画像アップ欄</strong></label>
-          <label><span>タイトル欄</span><input type="text" placeholder="タイトルを入力"></label>
-          <label><span>本文欄</span><textarea rows="8" placeholder="本文を入力"></textarea></label>
-          <button type="button" class="admin-primary-button admin-confirm-button">確定</button>
+          <label class="admin-upload-box"><span>Post image</span><input name="newsImage" type="file" accept="image/*"><strong>Upload image</strong><small>Poster or screenshot image</small></label>
+          <label><span>Date</span><input name="newsDate" type="date"></label>
+          <label><span>Title</span><input name="newsTitle" type="text" placeholder="News title"></label>
+          <label><span>Body</span><textarea name="newsBody" rows="8" placeholder="News body"></textarea></label>
+          <label><span>Status</span><select name="newsVisible"><option selected>Show</option><option>Hide</option></select></label>
+          <button type="button" class="admin-primary-button admin-confirm-button">Save</button>
         </form>
       </section>
-      <section class="admin-secondary-actions"><a class="admin-secondary-button" href="charme-news-archive.html">過去アーカイブ</a></section>
+      <section class="admin-secondary-actions"><a class="admin-secondary-button" href="charme-news-archive.html">Past archive</a></section>
     </main>
     <footer class="site-footer"><span>Charme News Admin</span><a href="charme.html">Dashboard</a></footer>
+    <script type="module" src="../scripts/tempest-news-admin.js?v=20260709-0915"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

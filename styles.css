@@ -726,6 +726,32 @@ h1 {
   pointer-events: none;
 }
 
+.db-news-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-size: cover;
+  background-position: center;
+}
+
+.db-news-meta {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 6px;
+  padding: 0 18px 62px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+.db-news-meta time {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
 .news-thumb-title {
   position: absolute;
   right: 14px;
@@ -1715,6 +1741,14 @@ h1 {
   background: rgba(0, 0, 0, 0.2);
   font-size: 11px;
   font-weight: 900;
+  overflow: hidden;
+}
+
+.admin-archive-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .admin-archive-body {
