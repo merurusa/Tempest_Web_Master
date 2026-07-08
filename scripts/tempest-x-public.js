@@ -25,11 +25,11 @@ function cardTemplate(card) {
   return `
     <a class="x-post-card rich-x-post-card" href="${escapeHtml(href)}" target="_blank" rel="noopener">
       <span class="x-post-badge">X</span>
-      <strong>Official Post</strong>
+      <strong>Official X</strong>
       ${date}
       ${text}
       ${image}
-      <small>View on X</small>
+      <small>Xで見る</small>
     </a>
   `;
 }
@@ -38,7 +38,7 @@ function renderEmpty() {
   if (!section) return;
   const existing = section.querySelector(".shop-x-placeholder");
   if (existing) return;
-  section.insertAdjacentHTML("beforeend", '<div class="shop-x-placeholder" data-x-url=""><span>Coming soon</span><small>X posts will appear here.</small></div>');
+  section.insertAdjacentHTML("beforeend", '<div class="shop-x-placeholder" data-x-url=""><span>Coming soon</span><small>公式Xの投稿をここに表示できます。</small></div>');
 }
 
 async function renderCards() {

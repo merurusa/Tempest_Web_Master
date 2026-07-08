@@ -38,7 +38,7 @@ function setPreview(cast) {
   if (!preview) return;
   const imageUrl = castImageUrl(cast, "profile");
   preview.className = `admin-cast-preview-frame ${cast.imagePosition || "image-pos-center"}`;
-  preview.innerHTML = imageUrl ? `<img src="${imageUrl}" alt="">` : "<span>Preview</span>";
+  preview.innerHTML = imageUrl ? `<img src="${imageUrl}" alt="">` : "<span>プレビュー</span>";
 }
 
 async function uploadImageIfNeeded(data) {
@@ -92,27 +92,27 @@ async function fillCast() {
 
 async function saveCast() {
   if (!currentUser) {
-    showInlineMessage(form, "Not logged in. Open /admin/ and login first.", true);
+    showInlineMessage(form, "ログインしてから保存してください。", true);
     return;
   }
 
   const button = form.querySelector(".admin-confirm-button");
-  const originalText = button?.textContent || "Save";
+  const originalText = button?.textContent || "保存";
   if (button) {
     button.disabled = true;
-    button.textContent = "Saving...";
+    button.textContent = "保存中...";
   }
 
   try {
     let data = collectCast();
     data = await uploadImageIfNeeded(data);
     await setDoc(doc(db, "stores", storeId, "casts", slot), data, { merge: true });
-    showInlineMessage(form, "Saved.");
+    showInlineMessage(form, "保存しました。");
     setPreview({ ...data });
   } catch (error) {
     console.error(error);
     const code = error?.code ? ` (${error.code})` : "";
-    showInlineMessage(form, `Save failed${code}.`, true);
+    showInlineMessage(form, `保存に失敗しました${code}。`, true);
   } finally {
     if (button) {
       button.disabled = false;
@@ -133,5 +133,5 @@ form?.querySelector(".admin-confirm-button")?.addEventListener("click", saveCast
 
 fillCast().catch((error) => {
   console.error(error);
-  showInlineMessage(form, "Load failed.", true);
+  showInlineMessage(form, "読み込みに失敗しました。", true);
 });

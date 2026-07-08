@@ -71,16 +71,16 @@ async function loadCards() {
 
 async function saveCard(card, index) {
   const button = card.querySelector(".admin-x-update-button");
-  const originalText = button?.textContent || "Save";
+  const originalText = button?.textContent || "保存";
 
   if (!currentUser) {
-    showInlineMessage(card, "Not logged in. Open /admin/ and login with ID and password first.", true);
+    showInlineMessage(card, "ログインしてから保存してください。", true);
     return;
   }
 
   if (button) {
     button.disabled = true;
-    button.textContent = "Saving...";
+    button.textContent = "保存中...";
   }
 
   try {
@@ -88,11 +88,11 @@ async function saveCard(card, index) {
     data = await uploadImageIfNeeded(card, index, data);
     await setDoc(doc(db, "stores", storeId, "xCards", cardId(index)), data, { merge: true });
     setPreview(card, data.imageUrl);
-    showInlineMessage(card, "Saved.");
+    showInlineMessage(card, "保存しました。");
   } catch (error) {
     console.error(error);
     const code = error?.code ? ` (${error.code})` : "";
-    showInlineMessage(card, `Save failed${code}. Check Firebase Auth, Firestore, and Storage settings.`, true);
+    showInlineMessage(card, `保存に失敗しました${code}。Firebase設定を確認してください。`, true);
   } finally {
     if (button) {
       button.disabled = false;
@@ -113,5 +113,5 @@ cards.forEach((card, index) => {
 
 loadCards().catch((error) => {
   console.error(error);
-  cards.forEach((card) => showInlineMessage(card, "Load failed. Check Firebase settings.", true));
+  cards.forEach((card) => showInlineMessage(card, "読み込みに失敗しました。Firebase設定を確認してください。", true));
 });
