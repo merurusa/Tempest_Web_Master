@@ -37,15 +37,15 @@ async function uploadNewsImage(docRef) {
 async function saveNews() {
   if (!form) return;
   if (!currentUser) {
-    showInlineMessage(form, "Not logged in. Open /admin/ and login with ID and password first.", true);
+    showInlineMessage(form, "ログインしてから保存してください。", true);
     return;
   }
 
   const button = form.querySelector(".admin-confirm-button");
-  const originalText = button?.textContent || "Save";
+  const originalText = button?.textContent || "保存";
   if (button) {
     button.disabled = true;
-    button.textContent = "Saving...";
+    button.textContent = "保存中...";
   }
 
   try {
@@ -64,11 +64,11 @@ async function saveNews() {
     }
 
     form.reset();
-    showInlineMessage(form, "Saved.");
+    showInlineMessage(form, "保存しました。");
   } catch (error) {
     console.error(error);
     const code = error?.code ? ` (${error.code})` : "";
-    showInlineMessage(form, `Save failed${code}. Check Firebase Auth, Firestore, and Storage settings.`, true);
+    showInlineMessage(form, `保存に失敗しました${code}。Firebase設定を確認してください。`, true);
   } finally {
     if (button) {
       button.disabled = false;

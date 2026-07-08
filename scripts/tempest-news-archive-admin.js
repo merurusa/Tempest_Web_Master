@@ -24,15 +24,15 @@ function escapeHtml(value = "") {
 function postTemplate(id, post) {
   const image = post.imageUrl
     ? `<img src="${escapeHtml(post.imageUrl)}" alt="">`
-    : "No Image";
+    : "画像なし";
   const visible = post.visible === false ? "Hide" : "Show";
 
   return `
     <article class="admin-archive-post" data-post-id="${escapeHtml(id)}">
       <div class="admin-archive-image">${image}</div>
-      <div class="admin-archive-body"><time>${escapeHtml(post.date || "")}</time><strong>${escapeHtml(post.title || "Untitled")}</strong></div>
-      <label class="admin-archive-status"><span>Status</span><select name="visible"><option ${visible === "Show" ? "selected" : ""}>Show</option><option ${visible === "Hide" ? "selected" : ""}>Hide</option></select></label>
-      <button type="button" class="admin-secondary-button admin-archive-save">Save</button>
+      <div class="admin-archive-body"><time>${escapeHtml(post.date || "")}</time><strong>${escapeHtml(post.title || "無題")}</strong></div>
+      <label class="admin-archive-status"><span>表示設定</span><select name="visible"><option value="Show" ${visible === "Show" ? "selected" : ""}>表示</option><option value="Hide" ${visible === "Hide" ? "selected" : ""}>非表示</option></select></label>
+      <button type="button" class="admin-secondary-button admin-archive-save">保存</button>
     </article>
   `;
 }
@@ -41,7 +41,7 @@ async function renderArchive() {
   if (!list) return;
   const snap = await getDocs(query(collection(db, "stores", storeId, "newsPosts"), orderBy("createdAt", "desc")));
   if (snap.empty) {
-    list.innerHTML = '<article class="admin-archive-post"><div class="admin-archive-body"><strong>No posts yet.</strong></div></article>';
+    list.innerHTML = '<article class="admin-archive-post"><div class="admin-archive-body"><strong>投稿はまだありません。</strong></div></article>';
     return;
   }
   list.innerHTML = snap.docs.map((docSnap) => postTemplate(docSnap.id, docSnap.data())).join("");
@@ -54,7 +54,7 @@ list?.addEventListener("click", async (event) => {
   const postId = post?.dataset.postId;
   if (!postId) return;
   if (!currentUser) {
-    showInlineMessage(post, "Not logged in. Open /admin/ and login first.", true);
+    showInlineMessage(post, "ログインしてから保存してください。", true);
     return;
   }
 
@@ -63,11 +63,11 @@ list?.addEventListener("click", async (event) => {
     await updateDoc(doc(db, "stores", storeId, "newsPosts", postId), {
       visible: post.querySelector('[name="visible"]')?.value !== "Hide"
     });
-    showInlineMessage(post, "Saved.");
+    showInlineMessage(post, "保存しました。");
   } catch (error) {
     console.error(error);
     const code = error?.code ? ` (${error.code})` : "";
-    showInlineMessage(post, `Save failed${code}.`, true);
+    showInlineMessage(post, `保存に失敗しました${code}。`, true);
   } finally {
     button.disabled = false;
   }
@@ -75,5 +75,5 @@ list?.addEventListener("click", async (event) => {
 
 renderArchive().catch((error) => {
   console.error(error);
-  if (list) list.innerHTML = '<article class="admin-archive-post"><div class="admin-archive-body"><strong>Load failed.</strong></div></article>';
+  if (list) list.innerHTML = '<article class="admin-archive-post"><div class="admin-archive-body"><strong>読み込みに失敗しました。</strong></div></article>';
 });
