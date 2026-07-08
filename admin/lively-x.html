@@ -1,52 +1,46 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lively X Cards | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260708-0819"></head>
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lively X Cards | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260709-0825"></head>
   <body class="admin-page admin-lively">
-    <header class="site-header"><a class="admin-back-button" href="lively.html" aria-label="Back">‹</a><a class="brand" href="lively.html"><span class="brand-mark">T</span><span>Lively X Cards</span></a><nav class="nav"><a href="lively.html">Dashboard</a><a href="index.html">Logout</a></nav></header>
+    <header class="site-header"><a class="admin-back-button" href="lively.html" aria-label="Back">&lt;</a><a class="brand" href="lively.html"><span class="brand-mark">T</span><span>Lively X Cards</span></a><nav class="nav"><a href="lively.html">Dashboard</a><a href="index.html">Logout</a></nav></header>
     <main class="admin-shell">
-      <section class="admin-hero"><h1>X Cards</h1></section>
+      <section class="admin-hero"><h1>X Cards</h1><p>Edit fixed X-style cards for the public shop page.</p></section>
       <section class="admin-x-card-list">
         <article class="admin-x-card">
-          <div class="admin-x-card-head"><span>X Card 1</span><strong>&#34920;&#31034;&#35373;&#23450;</strong></div>
-          <label><span>X URL</span><input type="url" placeholder="https://x.com/account/status/0000000000"></label>
-          <label><span>&#34920;&#31034;&#29366;&#24907;</span><select><option selected>&#34920;&#31034;</option><option>&#38750;&#34920;&#31034;</option></select></label>
-          <button type="button" class="admin-primary-button admin-x-update-button">&#26356;&#26032;</button>
-        </article>        <article class="admin-x-card">
-          <div class="admin-x-card-head"><span>X Card 2</span><strong>&#34920;&#31034;&#35373;&#23450;</strong></div>
-          <label><span>X URL</span><input type="url" placeholder="https://x.com/account/status/0000000000"></label>
-          <label><span>&#34920;&#31034;&#29366;&#24907;</span><select><option selected>&#34920;&#31034;</option><option>&#38750;&#34920;&#31034;</option></select></label>
-          <button type="button" class="admin-primary-button admin-x-update-button">&#26356;&#26032;</button>
-        </article>        <article class="admin-x-card">
-          <div class="admin-x-card-head"><span>X Card 3</span><strong>&#34920;&#31034;&#35373;&#23450;</strong></div>
-          <label><span>X URL</span><input type="url" placeholder="https://x.com/account/status/0000000000"></label>
-          <label><span>&#34920;&#31034;&#29366;&#24907;</span><select><option selected>&#34920;&#31034;</option><option>&#38750;&#34920;&#31034;</option></select></label>
-          <button type="button" class="admin-primary-button admin-x-update-button">&#26356;&#26032;</button>
-        </article>      </section>
+          <div class="admin-x-card-head"><span>X Card 1</span><strong>Post content</strong></div>
+          <label><span>Display</span><select name="x1Visible"><option selected>Show</option><option>Hide</option></select></label>
+          <label><span>Order</span><input type="number" name="x1Order" value="1" min="1" max="9"></label>
+          <label><span>Post date</span><input type="text" name="x1Date" placeholder="2026.07.09"></label>
+          <label><span>Post text</span><textarea name="x1Text" rows="5" placeholder="Paste the text to show on the card"></textarea></label>
+          <label class="admin-upload-box admin-x-image-upload"><span>Post image</span><input type="file" accept="image/*" name="x1Image"><strong>Upload image</strong><small>Screenshot or post image</small></label>
+          <div class="admin-x-preview"><span>Image preview</span></div>
+          <label><span>Original X URL</span><input type="url" name="x1Url" placeholder="https://x.com/account/status/0000000000"></label>
+          <button type="button" class="admin-primary-button admin-x-update-button">Save</button>
+        </article>
+        <article class="admin-x-card">
+          <div class="admin-x-card-head"><span>X Card 2</span><strong>Post content</strong></div>
+          <label><span>Display</span><select name="x2Visible"><option selected>Show</option><option>Hide</option></select></label>
+          <label><span>Order</span><input type="number" name="x2Order" value="2" min="1" max="9"></label>
+          <label><span>Post date</span><input type="text" name="x2Date" placeholder="2026.07.09"></label>
+          <label><span>Post text</span><textarea name="x2Text" rows="5" placeholder="Paste the text to show on the card"></textarea></label>
+          <label class="admin-upload-box admin-x-image-upload"><span>Post image</span><input type="file" accept="image/*" name="x2Image"><strong>Upload image</strong><small>Screenshot or post image</small></label>
+          <div class="admin-x-preview"><span>Image preview</span></div>
+          <label><span>Original X URL</span><input type="url" name="x2Url" placeholder="https://x.com/account/status/0000000000"></label>
+          <button type="button" class="admin-primary-button admin-x-update-button">Save</button>
+        </article>
+        <article class="admin-x-card">
+          <div class="admin-x-card-head"><span>X Card 3</span><strong>Post content</strong></div>
+          <label><span>Display</span><select name="x3Visible"><option selected>Show</option><option>Hide</option></select></label>
+          <label><span>Order</span><input type="number" name="x3Order" value="3" min="1" max="9"></label>
+          <label><span>Post date</span><input type="text" name="x3Date" placeholder="2026.07.09"></label>
+          <label><span>Post text</span><textarea name="x3Text" rows="5" placeholder="Paste the text to show on the card"></textarea></label>
+          <label class="admin-upload-box admin-x-image-upload"><span>Post image</span><input type="file" accept="image/*" name="x3Image"><strong>Upload image</strong><small>Screenshot or post image</small></label>
+          <div class="admin-x-preview"><span>Image preview</span></div>
+          <label><span>Original X URL</span><input type="url" name="x3Url" placeholder="https://x.com/account/status/0000000000"></label>
+          <button type="button" class="admin-primary-button admin-x-update-button">Save</button>
+        </article>
+      </section>
     </main>
     <footer class="site-footer"><span>Lively X Cards</span><a href="lively.html">Dashboard</a></footer>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
