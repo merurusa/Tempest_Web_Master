@@ -1,65 +1,35 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin | Tempest</title>
-    <link rel="stylesheet" href="../styles.css?v=20260708-0819">
+    <title>管理ログイン | Tempest</title>
+    <link rel="stylesheet" href="../styles.css?v=20260709-1030">
   </head>
   <body class="admin-page">
-    <header class="site-header"><a class="admin-back-button" href="../index.html" aria-label="Back">‹</a>
-      <a class="brand" href="../index.html"><span class="brand-mark">T</span><span>Tempest Admin</span></a>
-      <nav class="nav"><a href="../index.html">Site</a></nav>
+    <header class="site-header">
+      <a class="admin-back-button" href="../index.html" aria-label="戻る">‹</a>
+      <a class="brand" href="../index.html"><span class="brand-mark">T</span><span>Tempest 管理</span></a>
+      <nav class="nav"><a href="../index.html">公開TOP</a></nav>
     </header>
     <main class="admin-shell">
       <section class="admin-hero">
-        
-        <h1>Login</h1>
-        
+        <h1>管理ログイン</h1>
+        <p>IDを入力すると、対応する管理画面へ移動します。</p>
       </section>
       <section class="admin-login-panel">
         <div class="panel">
-          
-          <h2>Admin Login</h2>
+          <h2>ログイン</h2>
           <form class="admin-form-grid" id="admin-login-form">
-            <label><span>ID</span><input id="admin-id" type="text" placeholder="solomon" autocomplete="username"></label>
-            <label><span>Password</span><input id="admin-password" type="password" inputmode="numeric" minlength="6" placeholder="000000" autocomplete="current-password"></label>
-            <button type="submit" class="admin-primary-button">Login</button>
+            <label><span>ID</span><input id="admin-id" type="text" placeholder="master / various / solomon" autocomplete="username"></label>
+            <label><span>パスワード</span><input id="admin-password" type="password" inputmode="numeric" minlength="6" placeholder="000000" autocomplete="current-password"></label>
+            <button type="submit" class="admin-primary-button">ログイン</button>
             <p class="admin-login-message" id="admin-login-message" aria-live="polite"></p>
           </form>
         </div>
       </section>
     </main>
-    <footer class="site-footer"><span>Admin Preview</span><a href="../index.html">Top</a></footer>
-    <script type="module" src="../scripts/tempest-admin-login.js?v=20260709-0845"></script>
+    <footer class="site-footer"><span>管理ログイン</span><a href="../index.html">公開TOPへ</a></footer>
+    <script type="module" src="../scripts/tempest-admin-login.js?v=20260709-1030"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

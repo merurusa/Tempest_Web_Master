@@ -1,43 +1,33 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ja">
-  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Solomon Store Admin | Tempest</title><link rel="stylesheet" href="../styles.css?v=20260708-0819"></head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solomon 店舗情報 | Tempest</title>
+    <link rel="stylesheet" href="../styles.css?v=20260709-1030">
+  </head>
   <body class="admin-page admin-solomon">
-    <header class="site-header"><a class="admin-back-button" href="solomon.html" aria-label="Back">‹</a><a class="brand" href="solomon.html"><span class="brand-mark">T</span><span>Solomon Store</span></a><nav class="nav"><a href="solomon.html">Dashboard</a><a href="index.html">Logout</a></nav></header>
+    <header class="site-header">
+      <a class="admin-back-button" href="solomon.html" aria-label="戻る">‹</a>
+      <a class="brand" href="solomon.html"><span class="brand-mark">T</span><span>Solomon 店舗情報</span></a>
+      <nav class="nav"><a href="solomon.html">管理TOP</a><a href="index.html">ログアウト</a></nav>
+    </header>
     <main class="admin-shell">
-      <section class="admin-hero"><h1>Store Edit</h1></section>
+      <section class="admin-hero"><h1>店舗情報</h1><p>住所・電話番号・営業時間・料金を編集できます。</p></section>
       <section class="admin-edit-panel panel">
-        <form class="admin-news-form">
-          <label><span>住所</span><input type="text" placeholder="大阪府大阪市都島区東野田町3-11-10 2F"></label>
-          <label><span>電話番号</span><input type="tel" placeholder="070-6640-0041"></label>
-          <label><span>オープン時間</span><input type="text" placeholder="18:00"></label>
-          <label><span>クローズ時間</span><input type="text" placeholder="22:00"></label>
-          <label><span>料金</span><textarea rows="5" placeholder="料金を入力"></textarea></label>
-          <button type="button" class="admin-primary-button admin-confirm-button">確定</button>
+        <form class="admin-store-form">
+          <label><span>住所</span><input name="address" type="text" placeholder="大阪府大阪市..." autocomplete="street-address"></label>
+          <label><span>電話番号</span><input name="tel" type="tel" placeholder="000-0000-0000"></label>
+          <div class="admin-two-col">
+            <label><span>オープン時間</span><input name="openStart" type="text" placeholder="20:00"></label>
+            <label><span>クローズ時間</span><input name="openEnd" type="text" placeholder="Last"></label>
+          </div>
+          <label><span>料金</span><textarea name="priceText" rows="6" placeholder="MENS1H/¥3,000&#10;LADIES1H/¥2,000"></textarea></label>
+          <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
         </form>
       </section>
     </main>
-    <footer class="site-footer"><span>Solomon Store Admin</span><a href="solomon.html">Dashboard</a></footer>
+    <footer class="site-footer"><span>Solomon 店舗情報</span><a href="solomon.html">管理TOPへ</a></footer>
+    <script type="module" src="../scripts/tempest-store-admin.js?v=20260709-1030"></script>
   </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

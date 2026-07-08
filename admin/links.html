@@ -3,41 +3,31 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Links Admin | Tempest</title>
-    <link rel="stylesheet" href="../styles.css?v=20260708-0819">
+    <title>リンク/App管理 | Tempest</title>
+    <link rel="stylesheet" href="../styles.css?v=20260709-1030">
   </head>
-  <body class="admin-page">
+  <body class="admin-page admin-master">
     <header class="site-header">
-      <a class="admin-back-button" href="master.html" aria-label="Back">‹</a>
-      <a class="brand" href="master.html"><span class="brand-mark">T</span><span>Links Admin</span></a>
-      <nav class="nav"><a href="master.html">Master</a><a href="index.html">Logout</a></nav>
+      <a class="admin-back-button" href="master.html" aria-label="戻る">‹</a>
+      <a class="brand" href="master.html"><span class="brand-mark">T</span><span>リンク/App管理</span></a>
+      <nav class="nav"><a href="master.html">マスター管理</a><a href="index.html">ログアウト</a></nav>
     </header>
-
     <main class="admin-shell">
-      <section class="admin-hero">
-        <h1>Links</h1>
-      </section>
-
+      <section class="admin-hero"><h1>リンク/App管理</h1><p>TOPページと各店ページで使う共通リンクを編集します。</p></section>
       <section class="admin-edit-panel panel">
-        <h2>各種SNS</h2>
-        <form class="admin-news-form">
-          <label><span>X</span><input type="url" placeholder="https://x.com/"></label>
-          <label><span>Instagram</span><input type="url" placeholder="https://www.instagram.com/"></label>
-          <label><span>TikTok</span><input type="url" placeholder="https://www.tiktok.com/@"></label>
-          <button type="button" class="admin-primary-button admin-confirm-button">確定</button>
-        </form>
-      </section>
-
-      <section class="admin-edit-panel panel">
-        <h2>公式App</h2>
-        <form class="admin-news-form">
-          <label><span>App Store</span><input type="url" placeholder="https://apps.apple.com/"></label>
-          <label><span>Google Play</span><input type="url" placeholder="https://play.google.com/store/apps/"></label>
-          <button type="button" class="admin-primary-button admin-confirm-button">確定</button>
+        <form class="admin-links-form">
+          <h2>各種SNS</h2>
+          <label><span>X</span><input name="xUrl" type="url" placeholder="https://x.com/"></label>
+          <label><span>Instagram</span><input name="instagramUrl" type="url" placeholder="https://www.instagram.com/"></label>
+          <label><span>TikTok</span><input name="tiktokUrl" type="url" placeholder="https://www.tiktok.com/@"></label>
+          <h2>公式App</h2>
+          <label><span>App 店舗情報</span><input name="appStoreUrl" type="url" placeholder="https://apps.apple.com/"></label>
+          <label><span>Google Play</span><input name="googlePlayUrl" type="url" placeholder="https://play.google.com/store/apps/"></label>
+          <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
         </form>
       </section>
     </main>
-
-    <footer class="site-footer"><span>Links Admin</span><a href="master.html">Master</a></footer>
+    <footer class="site-footer"><span>リンク/App管理</span><a href="master.html">マスター管理へ</a></footer>
+    <script type="module" src="../scripts/tempest-master-links-admin.js?v=20260709-1030"></script>
   </body>
 </html>
