@@ -1,0 +1,27 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isMaster() {
+      return signedIn() && request.auth.token.email == "master@tempest-admin.local";
+    }
+
+    function canWriteStore(storeId) {
+      return isMaster() || (signedIn() && request.auth.token.email == storeId + "@tempest-admin.local");
+    }
+
+    match /stores/{storeId}/xCards/{cardId} {
+      allow read: if true;
+      allow write: if canWriteStore(storeId);
+    }
+
+    match /stores/{storeId}/{document=**} {
+      allow read: if true;
+      allow write: if canWriteStore(storeId);
+    }
+  }
+}

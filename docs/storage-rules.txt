@@ -1,0 +1,22 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+    function signedIn() {
+      return request.auth != null;
+    }
+
+    function isMaster() {
+      return signedIn() && request.auth.token.email == "master@tempest-admin.local";
+    }
+
+    function canWriteStore(storeId) {
+      return isMaster() || (signedIn() && request.auth.token.email == storeId + "@tempest-admin.local");
+    }
+
+    match /stores/{storeId}/xCards/{cardId}/{fileName} {
+      allow read: if true;
+      allow write: if canWriteStore(storeId);
+    }
+  }
+}

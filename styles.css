@@ -959,6 +959,54 @@ h1 {
   transform: translateY(-1px);
 }
 
+.rich-x-post-card {
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "badge title"
+    "badge date"
+    "text text"
+    "image image"
+    "meta meta";
+}
+
+.x-post-date {
+  grid-area: date;
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.x-post-text {
+  grid-area: text;
+  position: relative;
+  z-index: 1;
+  margin: 8px 0 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 750;
+  line-height: 1.65;
+}
+
+.x-post-image {
+  grid-area: image;
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.x-post-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
@@ -1445,6 +1493,25 @@ h1 {
   color: var(--muted);
   font-size: 12px;
   font-weight: 900;
+}
+
+.admin-x-preview img {
+  display: block;
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 9px;
+}
+
+.admin-save-message {
+  margin: 2px 0 0;
+  color: var(--gold);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.admin-save-message[data-status="error"] {
+  color: #ff8a8a;
 }
 
 .admin-x-update-button {

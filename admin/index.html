@@ -23,7 +23,7 @@
           <h2>Admin Login</h2>
           <form class="admin-form-grid" id="admin-login-form">
             <label><span>ID</span><input id="admin-id" type="text" placeholder="solomon" autocomplete="username"></label>
-            <label><span>4 digit password</span><input id="admin-password" type="password" inputmode="numeric" pattern="[0-9]{4}" maxlength="4" placeholder="0000" autocomplete="current-password"></label>
+            <label><span>Password</span><input id="admin-password" type="password" inputmode="numeric" minlength="6" placeholder="000000" autocomplete="current-password"></label>
             <button type="submit" class="admin-primary-button">Login</button>
             <p class="admin-login-message" id="admin-login-message" aria-live="polite"></p>
           </form>
@@ -40,29 +40,7 @@
       </section>
     </main>
     <footer class="site-footer"><span>Admin Preview</span><a href="../index.html">Top</a></footer>
-    <script>
-      const testAdmins = {
-        various: "various.html",
-        solomon: "solomon.html",
-        lively: "lively.html",
-        charme: "charme.html",
-        strive: "strive.html",
-        ebichanchi: "ebichanchi.html",
-        master: "master.html"
-      };
-
-      document.getElementById("admin-login-form").addEventListener("submit", (event) => {
-        event.preventDefault();
-        const id = document.getElementById("admin-id").value.trim().toLowerCase();
-        const password = document.getElementById("admin-password").value.trim();
-        const message = document.getElementById("admin-login-message");
-        if (testAdmins[id] && password === "0000") {
-          window.location.href = testAdmins[id];
-          return;
-        }
-        message.textContent = "ID or password is incorrect.";
-      });
-    </script>
+    <script type="module" src="../scripts/tempest-admin-login.js?v=20260709-0845"></script>
   </body>
 </html>
 
