@@ -888,6 +888,77 @@ h1 {
   background: rgba(0, 0, 0, 0.22);
 }
 
+.x-post-list {
+  display: grid;
+  gap: 12px;
+}
+
+.x-post-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "badge title"
+    "badge meta";
+  align-items: center;
+  gap: 3px 12px;
+  min-height: 78px;
+  padding: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 12px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.11), rgba(255, 255, 255, 0.03)),
+    rgba(0, 0, 0, 0.22);
+  color: var(--ink);
+  text-decoration: none;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+}
+
+.x-post-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top right, rgba(255, 214, 126, 0.18), transparent 34%);
+  pointer-events: none;
+}
+
+.x-post-badge {
+  grid-area: badge;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: var(--gold);
+  font-weight: 950;
+  font-size: 18px;
+}
+
+.x-post-card strong {
+  grid-area: title;
+  position: relative;
+  z-index: 1;
+  font-size: 17px;
+  font-weight: 950;
+}
+
+.x-post-card small {
+  grid-area: meta;
+  position: relative;
+  z-index: 1;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.x-post-card:hover {
+  border-color: rgba(255, 214, 126, 0.48);
+  transform: translateY(-1px);
+}
+
 .site-footer {
   display: flex;
   justify-content: space-between;
