@@ -1,9 +1,16 @@
 import { doc, getDoc, serverTimestamp, setDoc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
 import { getDownloadURL, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-storage.js";
-import { db, inferStoreIdFromPath, showInlineMessage, storage } from "./tempest-firebase.js";
+import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+import { app, db, inferStoreIdFromPath, showInlineMessage, storage } from "./tempest-firebase.js";
 
 const storeId = inferStoreIdFromPath();
 const cards = [...document.querySelectorAll(".admin-x-card")];
+const auth = getAuth(app);
+let currentUser = auth.currentUser;
+
+onAuthStateChanged(auth, (user) => {
+  currentUser = user;
+});
 
 function field(card, suffix) {
   return card.querySelector(`[name$="${suffix}"]`);
@@ -65,6 +72,12 @@ async function loadCards() {
 async function saveCard(card, index) {
   const button = card.querySelector(".admin-x-update-button");
   const originalText = button?.textContent || "Save";
+
+  if (!currentUser) {
+    showInlineMessage(card, "Not logged in. Open /admin/ and login with ID and password first.", true);
+    return;
+  }
+
   if (button) {
     button.disabled = true;
     button.textContent = "Saving...";
@@ -78,7 +91,8 @@ async function saveCard(card, index) {
     showInlineMessage(card, "Saved.");
   } catch (error) {
     console.error(error);
-    showInlineMessage(card, "Save failed. Check Firebase Auth, Firestore, and Storage settings.", true);
+    const code = error?.code ? ` (${error.code})` : "";
+    showInlineMessage(card, `Save failed${code}. Check Firebase Auth, Firestore, and Storage settings.`, true);
   } finally {
     if (button) {
       button.disabled = false;
