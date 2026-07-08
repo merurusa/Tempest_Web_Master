@@ -21,23 +21,23 @@ if (form && idInput && passwordInput) {
     const account = adminAccounts[id];
 
     if (!account) {
-      setMessage("ID is incorrect.");
+      setMessage("IDが正しくありません。");
       return;
     }
 
     if (password.length < 6) {
-      setMessage("Password must be 6 characters or more.");
+      setMessage("パスワードは6文字以上で入力してください。");
       return;
     }
 
     try {
-      setMessage("Logging in...");
+      setMessage("ログイン中...");
       const auth = getAuth(app);
       await signInWithEmailAndPassword(auth, account.email, password);
       window.location.href = account.redirect;
     } catch (error) {
       console.error(error);
-      setMessage("Login failed. Check the Firebase user and password.");
+      setMessage("ログインに失敗しました。IDとパスワードを確認してください。");
     }
   });
 }
