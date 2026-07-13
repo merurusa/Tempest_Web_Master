@@ -3203,6 +3203,8 @@ h1 {
 .admin-menu-card[href*="-x"]::after { content: "公式Xカードの表示管理"; }
 .admin-menu-card[href*="links"]::after { content: "SNS・アプリリンク"; }
 .admin-menu-card[href*="image"]::after { content: "バナー・画像差し替え"; }
+.admin-menu-card[href*="analytics"]::before { content: "A"; }
+.admin-menu-card[href*="analytics"]::after { content: "アクセス数・流入元・ページ別"; }
 
 .admin-menu-card:hover,
 .admin-cast-select-card:hover {
@@ -3211,6 +3213,96 @@ h1 {
   background:
     radial-gradient(circle at 88% 12%, color-mix(in srgb, var(--gold) 26%, transparent), transparent 31%),
     linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045));
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  max-width: 1120px;
+  width: min(100% - 28px, 1120px);
+  margin: 18px auto;
+}
+
+.analytics-panel {
+  max-width: 1120px;
+  width: min(100% - 28px, 1120px);
+  margin: 18px auto;
+}
+
+.analytics-grid .analytics-panel {
+  width: 100%;
+  margin: 0;
+}
+
+.analytics-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.analytics-kpi {
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.analytics-kpi span,
+.analytics-row span,
+.analytics-row small,
+.analytics-empty {
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.analytics-kpi strong {
+  display: block;
+  margin-top: 8px;
+  color: var(--ink);
+  font-size: clamp(24px, 5vw, 42px);
+  line-height: 1;
+}
+
+.analytics-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.analytics-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.analytics-row strong {
+  color: var(--ink);
+}
+
+.analytics-row-stack {
+  grid-template-columns: 1fr;
+  gap: 4px;
+}
+
+.analytics-row-stack small {
+  word-break: break-all;
+}
+
+.analytics-external-link {
+  display: inline-flex;
+  width: auto;
+  margin-top: 14px;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .analytics-grid,
+  .analytics-kpi-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .admin-menu-card span,
@@ -3416,6 +3508,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
