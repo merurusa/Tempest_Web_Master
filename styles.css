@@ -1050,42 +1050,42 @@ h1 {
 .shop-home.shop-various .hero {
   background:
     linear-gradient(90deg, rgba(3, 5, 10, 0.74) 0%, rgba(3, 5, 10, 0.42) 50%, rgba(3, 5, 10, 0.06) 100%),
-    url("assets/shop-hero-banners/various_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/various_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
 .shop-home.shop-solomon .hero {
   background:
     linear-gradient(90deg, rgba(255, 255, 255, 0.84) 0%, rgba(255, 255, 255, 0.42) 50%, rgba(255, 255, 255, 0.06) 100%),
-    url("assets/shop-hero-banners/solomon_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/solomon_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
 .shop-home.shop-lively .hero {
   background:
     linear-gradient(90deg, rgba(7, 3, 3, 0.76) 0%, rgba(7, 3, 3, 0.42) 50%, rgba(7, 3, 3, 0.06) 100%),
-    url("assets/shop-hero-banners/lively_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/lively_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
 .shop-home.shop-charme .hero {
   background:
     linear-gradient(90deg, rgba(8, 4, 12, 0.76) 0%, rgba(8, 4, 12, 0.42) 50%, rgba(8, 4, 12, 0.06) 100%),
-    url("assets/shop-hero-banners/charme_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/charme_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
 .shop-home.shop-strive .hero {
   background:
     linear-gradient(90deg, rgba(5, 6, 10, 0.76) 0%, rgba(5, 6, 10, 0.42) 50%, rgba(5, 6, 10, 0.06) 100%),
-    url("assets/shop-hero-banners/strive_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/strive_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
 .shop-home.shop-ebichanchi .hero {
   background:
     linear-gradient(90deg, rgba(255, 250, 240, 0.84) 0%, rgba(255, 250, 240, 0.42) 50%, rgba(255, 250, 240, 0.06) 100%),
-    url("assets/shop-hero-banners/ebichanchi_banner.png") center / cover no-repeat,
+    url("assets/shop-hero-banners/ebichanchi_banner.jpg") center / cover no-repeat,
     linear-gradient(135deg, var(--shop-a), var(--shop-b));
 }
 
@@ -1143,7 +1143,7 @@ h1 {
 .shop-various {
   background:
     linear-gradient(180deg, rgba(2, 4, 9, 0.10), rgba(2, 4, 9, 0.22)),
-    url("assets/page-backgrounds/various_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/various_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #03050a, #071326 48%, #102f62);
 }
 
@@ -2154,35 +2154,35 @@ h1 {
 .shop-solomon {
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 246, 252, 0.28)),
-    url("assets/page-backgrounds/solomon_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/solomon_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #fffafd, #f6d5e5 48%, #d98bb0);
 }
 
 .shop-lively {
   background:
     linear-gradient(180deg, rgba(8, 0, 0, 0.12), rgba(8, 0, 0, 0.30)),
-    url("assets/page-backgrounds/lively_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/lively_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #070303, #1d0508 48%, #690b15);
 }
 
 .shop-charme {
   background:
     linear-gradient(180deg, rgba(7, 0, 12, 0.12), rgba(7, 0, 12, 0.30)),
-    url("assets/page-backgrounds/charme_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/charme_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #060409, #15071d 48%, #542075);
 }
 
 .shop-strive {
   background:
     linear-gradient(180deg, rgba(4, 5, 9, 0.12), rgba(4, 5, 9, 0.30)),
-    url("assets/page-backgrounds/strive_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/strive_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #05060a, #111824 48%, #4c5663);
 }
 
 .shop-ebichanchi {
   background:
     linear-gradient(180deg, rgba(255, 250, 235, 0.10), rgba(255, 246, 226, 0.30)),
-    url("assets/page-backgrounds/ebichanchi_page_bg.png") center center / cover fixed no-repeat,
+    url("assets/page-backgrounds/ebichanchi_page_bg.jpg") center center / cover fixed no-repeat,
     linear-gradient(160deg, #fffaf0, #f7dc90 48%, #d6a525);
 }
 
@@ -3416,6 +3416,7 @@ h1 {
     padding: 8px 8px 9px;
   }
 }
+
 
 
 
