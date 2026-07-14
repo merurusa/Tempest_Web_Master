@@ -3189,6 +3189,7 @@ h1 {
 .admin-menu-card[href*="-x"]::before { content: "X"; }
 .admin-menu-card[href*="links"]::before { content: "L"; }
 .admin-menu-card[href*="image"]::before { content: "I"; }
+.admin-menu-card[href*="official"]::before { content: "O"; }
 
 .admin-menu-card::after {
   content: "編集する";
@@ -3203,6 +3204,7 @@ h1 {
 .admin-menu-card[href*="-x"]::after { content: "公式Xカードの表示管理"; }
 .admin-menu-card[href*="links"]::after { content: "SNS・アプリリンク"; }
 .admin-menu-card[href*="image"]::after { content: "バナー・画像差し替え"; }
+.admin-menu-card[href*="official"]::after { content: "求人・公式SNSリンク"; }
 .admin-menu-card[href*="analytics"]::before { content: "A"; }
 .admin-menu-card[href*="analytics"]::after { content: "アクセス数・流入元・ページ別"; }
 
