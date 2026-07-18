@@ -3205,6 +3205,73 @@ h1 {
 .admin-menu-card[href*="links"]::after { content: "SNS・アプリリンク"; }
 .admin-menu-card[href*="image"]::after { content: "バナー・画像差し替え"; }
 .admin-menu-card[href*="official"]::after { content: "求人・公式SNSリンク"; }
+
+.admin-official-form {
+  display: grid;
+  gap: 14px;
+}
+
+.admin-official-form label {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+  border: 1px solid color-mix(in srgb, var(--gold) 18%, rgba(255, 255, 255, 0.12));
+  border-radius: 16px;
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--gold) 8%, transparent), rgba(255, 255, 255, 0.045)),
+    rgba(0, 0, 0, 0.18);
+}
+
+.admin-official-form label > span {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  min-height: 26px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #100c08;
+  background: color-mix(in srgb, var(--gold) 78%, white);
+  font-size: 12px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.admin-official-form label > small {
+  display: block;
+  margin-top: -4px;
+  color: color-mix(in srgb, var(--ink) 62%, transparent);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.5;
+}
+
+.admin-official-form input {
+  width: 100%;
+  min-height: 54px;
+  padding: 13px 14px;
+  border: 1px solid color-mix(in srgb, var(--gold) 18%, rgba(255, 255, 255, 0.14));
+  border-radius: 13px;
+  color: var(--ink);
+  background: rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  font: inherit;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.admin-official-form input::placeholder {
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.admin-official-form input:focus {
+  outline: 2px solid color-mix(in srgb, var(--gold) 64%, transparent);
+  outline-offset: 2px;
+  border-color: var(--gold);
+}
+
+.admin-official-form .admin-confirm-button {
+  margin-top: 6px;
+}
 .admin-menu-card[href*="analytics"]::before { content: "A"; }
 .admin-menu-card[href*="analytics"]::after { content: "アクセス数・流入元・ページ別"; }
 
