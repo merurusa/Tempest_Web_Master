@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>画像管理 | Tempest</title>
-    <link rel="stylesheet" href="../styles.css?v=20260709-1030">
+    <link rel="stylesheet" href="../styles.css?v=20260720-slider">
   </head>
   <body class="admin-page admin-master">
     <header class="site-header">
@@ -13,9 +13,13 @@
       <nav class="nav"><a href="master.html">マスター管理</a><a href="index.html">ログアウト</a></nav>
     </header>
     <main class="admin-image-shell">
-      <section class="admin-hero"><h1>画像管理</h1><p>TOP画像・店舗バナー・Appアイコンを変更できます。</p></section>
+      <section class="admin-hero">
+        <h1>画像管理</h1>
+        <p>TOP画像、店舗バナー、Appアイコン、TOPスライドバナーを変更できます。</p>
+      </section>
+
       <section class="admin-image-control panel">
-        <h2>画像を変更</h2>
+        <h2>基本画像を変更</h2>
         <form class="admin-images-form">
           <div class="admin-image-control-grid">
             <label><span>変更場所</span><select name="imageKey">
@@ -34,8 +38,37 @@
           <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
         </form>
       </section>
+
+      <section class="admin-image-control panel">
+        <h2>TOPスライドバナー</h2>
+        <p class="admin-help-text">アプリ紹介の上に表示される横長バナーです。推奨サイズは1200×500px。</p>
+        <form class="admin-slider-form" data-slide-index="1">
+          <h3>スライド 01</h3>
+          <label><span>画像</span><input name="slideImage" type="file" accept="image/*"></label>
+          <label><span>リンクURL</span><input name="linkUrl" type="url" placeholder="https://example.com"></label>
+          <label class="admin-toggle-row"><span>表示する</span><input name="visible" type="checkbox" checked><em>ON / OFF</em></label>
+          <div class="admin-slider-preview"><span>プレビュー</span></div>
+          <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
+        </form>
+        <form class="admin-slider-form" data-slide-index="2">
+          <h3>スライド 02</h3>
+          <label><span>画像</span><input name="slideImage" type="file" accept="image/*"></label>
+          <label><span>リンクURL</span><input name="linkUrl" type="url" placeholder="https://example.com"></label>
+          <label class="admin-toggle-row"><span>表示する</span><input name="visible" type="checkbox" checked><em>ON / OFF</em></label>
+          <div class="admin-slider-preview"><span>プレビュー</span></div>
+          <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
+        </form>
+        <form class="admin-slider-form" data-slide-index="3">
+          <h3>スライド 03</h3>
+          <label><span>画像</span><input name="slideImage" type="file" accept="image/*"></label>
+          <label><span>リンクURL</span><input name="linkUrl" type="url" placeholder="https://example.com"></label>
+          <label class="admin-toggle-row"><span>表示する</span><input name="visible" type="checkbox" checked><em>ON / OFF</em></label>
+          <div class="admin-slider-preview"><span>プレビュー</span></div>
+          <button type="button" class="admin-primary-button admin-confirm-button">保存</button>
+        </form>
+      </section>
     </main>
     <footer class="site-footer"><span>画像管理</span><a href="master.html">マスター管理へ</a></footer>
-    <script type="module" src="../scripts/tempest-master-images-admin.js?v=20260709-1030"></script>
+    <script type="module" src="../scripts/tempest-master-images-admin.js?v=20260720-slider"></script>
   </body>
 </html>
